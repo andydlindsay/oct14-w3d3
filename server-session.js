@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(cookieSession({
   name: 'lecture',
-  keys: ['whatever you want', 'key2']
+  keys: ['whatever you want'],
+  // secret: 'secret string'
 }));
 
 app.set('view engine', 'ejs');
